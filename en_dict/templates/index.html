@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>
+        English Dictionary
+    </title>
+</head>
+<body>
+    <div
+    class="bg-image"
+    style="
+        background: url('https://images.unsplash.com/photo-1532691900426-90f6909545f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    "
+    >
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4 text-white mb-0">English Dictionary</h1>
+                        <p class="lead text-white mb-0">Type an english word to see its meaning from Dictionary.</p>
+                        <div class="form-outline">
+                            <form action="word">
+                                <div class="input-group">
+                                    <input type="search" class="form-control rounded" autocomplete="off" autofocus placeholder="Search" aria-label="Search"
+                                    aria-describedby="search-addon" name="search" />
+                                    <button class="btn btn-outline-light" type="submit">Search</button>
+                                  </div>
+                            </form>
+                        </div>
+                        <br>
+                        
+                    </div>
+                </div>
+            </div>
+            <ul class="lead text-white mb-0">
+                {% block main %}{% endblock %}
+            </ul>
+        </div>
+    </div>
+</body>
